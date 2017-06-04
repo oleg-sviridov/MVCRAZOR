@@ -1,0 +1,83 @@
+﻿@*Все операторы Razor начинаются с символа '@'
+Данное представление строго типизированное. Строка №5 указывает на тип объекта модели.
+Модель, переданная в контроллере в качестве параметра метода View, может быть использована по ссылке @Model*@
+@*<MvcRazor.Models.Product>*@
+@using System.Data;
+@using DataVisualization.Charting.Chart;
+@model List<Int32>
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="~/Scripts/charts.js"></script>
+</head>
+<body>
+    @*Генерируем список случайных значений*@
+    @using (Html.BeginForm("Index", "Product", FormMethod.Post))
+    {
+        <input type="text" id="txtName" name="amount" />
+        <input type="submit" id="btnSubmit" value="Сгенерировать список случайных чисел" />
+    }
+    @if (ViewBag.Message != null)
+    {
+        <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+        </script>
+    }
+
+    @*Сохранем файл*@
+    <input type="button" value="Сохранить файл" onclick="location.href='@Url.Action("Save_File", "Product" )'" />
+
+    @*Рисуем график*@
+    @using (Html.BeginForm("Index", "Product", FormMethod.Post))
+    {
+        <input type="submit" id="btnSubmit" value="Нарисовать график 10 самых частых" />
+    }
+    @if (ViewBag.Message != null)
+    {
+        <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+        </script>
+    }
+
+    @*Выводим таблицу*@
+    @if (Model != null)
+    { 
+        foreach (var Number in Model)
+        {
+            @*Чтение свойства элемента модели*@
+            <h3>Имя продукта: @Number</h3>
+        
+            //if (item.Category == "Канцтовары")
+            //{
+                @*Razor понимает, что оператор в теле if начинается с HTML дескриптора, 
+                и поэтому относится к нему как к разметке, которую нужно генерировать*@
+                //<p>На канцтовары действует <b>скидка 10%</b></p>
+            //}
+
+            //if (item.Price < 5)
+            //{
+                @* Префикс строки @: указывает что строку нужно обработать так, как если она будет HTML разметкой*@
+                //@:стоимость доставки 10 грн.
+            //}
+            //<hr />
+        }
+    }
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\MvcRazor.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\MvcRazor.pdb
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\Antlr3.Runtime.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\EntityFramework.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\Microsoft.Web.Infrastructure.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\Newtonsoft.Json.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Net.Http.Formatting.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.Http.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.Http.WebHost.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.Mvc.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.Optimization.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.Providers.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.Razor.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.WebPages.Deployment.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.WebPages.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.WebPages.Razor.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\WebGrease.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\EntityFramework.xml
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\Newtonsoft.Json.xml
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Net.Http.Formatting.xml
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.Http.xml
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.Http.WebHost.xml
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.Mvc.xml
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.Razor.xml
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.WebPages.xml
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.WebPages.Deployment.xml
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\bin\System.Web.WebPages.Razor.xml
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\obj\Debug\MvcRazor.csprojResolveAssemblyReference.cache
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\obj\Debug\MvcRazor.dll
+D:\Lessons\ASP.NET MVC Fundamentsl\001_Introduction\MvcRazor\MvcRazor\obj\Debug\MvcRazor.pdb
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\MvcRazor.dll.config
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\MvcRazor.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\MvcRazor.pdb
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\Antlr3.Runtime.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\EntityFramework.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\Microsoft.Web.Infrastructure.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\Newtonsoft.Json.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Net.Http.Formatting.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.Http.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.Http.WebHost.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.Mvc.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.Optimization.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.Providers.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.Razor.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.WebPages.Deployment.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.WebPages.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.WebPages.Razor.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\WebGrease.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\EntityFramework.xml
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\Newtonsoft.Json.xml
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Net.Http.Formatting.xml
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.Http.xml
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.Http.WebHost.xml
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.Mvc.xml
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.Razor.xml
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.WebPages.xml
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.WebPages.Deployment.xml
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\bin\System.Web.WebPages.Razor.xml
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\obj\Debug\MvcRazor.csprojResolveAssemblyReference.cache
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\obj\Debug\MvcRazor.dll
+D:\Lessons\ASP.NET MVC Fundamentals\001_Introduction\002_MvcRazor\MvcRazor\obj\Debug\MvcRazor.pdb
+D:\Projects\002_MvcRazor\MvcRazor\bin\MvcRazor.dll.config
+D:\Projects\002_MvcRazor\MvcRazor\bin\MvcRazor.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\MvcRazor.pdb
+D:\Projects\002_MvcRazor\MvcRazor\bin\Antlr3.Runtime.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\EntityFramework.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\Newtonsoft.Json.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Net.Http.Formatting.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.Http.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.Http.WebHost.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.Mvc.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.Optimization.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.Providers.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.Razor.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.WebPages.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.WebPages.Razor.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\WebGrease.dll
+D:\Projects\002_MvcRazor\MvcRazor\bin\EntityFramework.xml
+D:\Projects\002_MvcRazor\MvcRazor\bin\Newtonsoft.Json.xml
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Net.Http.Formatting.xml
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.Http.xml
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.Http.WebHost.xml
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.Mvc.xml
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.Razor.xml
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.WebPages.xml
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\002_MvcRazor\MvcRazor\bin\System.Web.WebPages.Razor.xml
+D:\Projects\002_MvcRazor\MvcRazor\obj\Debug\MvcRazor.csprojResolveAssemblyReference.cache
+D:\Projects\002_MvcRazor\MvcRazor\obj\Debug\MvcRazor.dll
+D:\Projects\002_MvcRazor\MvcRazor\obj\Debug\MvcRazor.pdb
