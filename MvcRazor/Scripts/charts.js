@@ -17,7 +17,6 @@ $(document).ready(function () {
                 series.push(serie);
             }
             DrawChart(series);
-            alert("График успешно построен");
         },
         error: function (xhr) {
             alert("Произошла ошибка чтения файла, возможно, данные были изменены");
