@@ -76,99 +76,130 @@ namespace MvcRazor.Controllers
         //запрос сохранения файла на компьютер пользователя
         public ActionResult Save_File()
         {
-            //передаем File в качестве результата
-            return File(path, System.Net.Mime.MediaTypeNames.Application.Octet, Path.GetFileName(path));
+            //передаем File в качестве результата, если файл случайных значений существует
+            if (!System.IO.File.Exists(path))
+            {
+                TempData["Message"] = string.Format("Файл не существует. Необходимо сначала сгенерировать файл случайных значений");
+                // Переходим на View Index
+                return RedirectToAction("Index", "Product");
+            }
+            else
+            {
+                return File(path, System.Net.Mime.MediaTypeNames.Application.Octet, Path.GetFileName(path));
+            }
         }
 
+        //Запрос ajax из chart.js. действие контроллера 
+        //возвращает JsonResult - список самые частые значений и их позиции в массиве
         [HttpGet]
         public ActionResult Draw()
         {
-            //инициализируем списки класса Numbers
-            List<Numbers> RandList = new List<Numbers>();
-            List<Numbers> CountList = new List<Numbers>();
-            List<Numbers> MostList = new List<Numbers>();
-            List<Numbers> MostSequenceList = new List<Numbers>();
-
-            //считываем список из файла в список класса Numbers
-            RandList = ReadFileToList(path);
-
-            //создаем список только со случайными значениями
-            var RandValues = RandList.Select(o => o.Value).ToList();
-
-            //логика для последующего вывода рейтинга 10 самых частых случайных чисел на графике (опционально)
-            /*
-            //рассчитываем количество повторений какого-либо числа
-            var groups = RandValues.GroupBy(item => item);
-            //приводим получившийся список к списку класса Numbers
-            foreach (var group in groups)
+            //выдаем список в формате JsonResult, если существует файл случайных значений
+            if (!System.IO.File.Exists(path))
             {
-                Numbers numbers = new Numbers();
-                numbers.Item = group.Key;
-                numbers.Value = group.Count();
-                
-                CountList.Add(numbers); 
+                TempData["Message"] = string.Format("Файл не существует. Необходимо сначала сгенерировать файл случайных значений");
+                // Переходим на View Index
+                return RedirectToAction("Index", "Product");
             }
-            }*/
-
-            //выбираем первые 10 самых частых случайных чисел
-            var most = RandValues.GroupBy(i => i).OrderByDescending(grp => grp.Count()).Select(grp => grp.Key).Take(10);
-
-            //логика для последующего вывода рейтинга 10 самых частых на графике (опционально)
-            /*int j = 1;
-            //приводим получившийся список к списку класса Numbers
-            foreach (var group in most)
+            else
             {
-                Numbers numbers = new Numbers();
-                numbers.Item = j;
-                j++;
-                numbers.Value = group;
+                //инициализируем списки класса Numbers
+                List<Numbers> RandList = new List<Numbers>();
+                List<Numbers> CountList = new List<Numbers>();
+                List<Numbers> MostList = new List<Numbers>();
+                List<Numbers> MostSequenceList = new List<Numbers>();
 
-                MostList.Add(numbers);
+                //считываем список из файла в список класса Numbers
+                RandList = ReadFileToList(path);
 
-            }*/
+                //создаем список только со случайными значениями
+                var RandValues = RandList.Select(o => o.Value).ToList();
 
-            //выбираем 10 самых частых случайных чисел из исходного списка RandList
-            var result = from Rand in RandList
-                        join Most in most.ToList()
-                        on Rand.Value equals Most
-                        select Rand;
-            //приводим получившийся список к списку класса Numbers
-            foreach (var val in result)
-            {
-                Numbers numbers = new Numbers();
-                numbers.Item = val.Item;
-                numbers.Value = val.Value;
-                MostSequenceList.Add(numbers);
+                //логика для последующего вывода рейтинга 10 самых частых случайных чисел на графике (опционально)
+                /*
+                //рассчитываем количество повторений какого-либо числа
+                var groups = RandValues.GroupBy(item => item);
+                //приводим получившийся список к списку класса Numbers
+                foreach (var group in groups)
+                {
+                    Numbers numbers = new Numbers();
+                    numbers.Item = group.Key;
+                    numbers.Value = group.Count();
+
+                    CountList.Add(numbers); 
+                }
+                }*/
+
+                //выбираем первые 10 самых частых случайных чисел
+                var most = RandValues.GroupBy(i => i).OrderByDescending(grp => grp.Count()).Select(grp => grp.Key).Take(10);
+
+                //логика для последующего вывода рейтинга 10 самых частых на графике (опционально)
+                /*int j = 1;
+                //приводим получившийся список к списку класса Numbers
+                foreach (var group in most)
+                {
+                    Numbers numbers = new Numbers();
+                    numbers.Item = j;
+                    j++;
+                    numbers.Value = group;
+
+                    MostList.Add(numbers);
+
+                }*/
+
+                //выбираем 10 самых частых случайных чисел из исходного списка RandList
+                var result = from Rand in RandList
+                             join Most in most.ToList()
+                             on Rand.Value equals Most
+                             select Rand;
+                //приводим получившийся список к списку класса Numbers
+                foreach (var val in result)
+                {
+                    Numbers numbers = new Numbers();
+                    numbers.Item = val.Item;
+                    numbers.Value = val.Value;
+                    MostSequenceList.Add(numbers);
+                }
+                //возвращаем JSonResult в JavaScript
+                return Json(MostSequenceList.ToList(), JsonRequestBehavior.AllowGet);
             }
-            //возвращаем JSonResult в JavaScript
-            return Json(MostSequenceList.ToList(), JsonRequestBehavior.AllowGet);
         }
 
         //запрос поиска случайных значений, повторяющихся определенное количество раз
         [HttpPost]
         public ActionResult Index(string amount)
         {
-            //задаем путь к файлу
-            string path = HttpRuntime.AppDomainAppPath + @"/sample.txt";
-            //инициализируем переменную количества повторений
-            int Amount = new int();
-            if (!String.IsNullOrEmpty(amount))
+            //выдаем список в формате JsonResult, если существует файл случайных значений
+            if (!System.IO.File.Exists(path))
             {
-                Int32.TryParse(amount, out Amount);
+                TempData["Message"] = string.Format("Файл не существует. Необходимо сначала сгенерировать файл случайных значений");
+                // Переходим на View Index
+                return RedirectToAction("Index", "Product");
             }
-            //инициализируем списки класса Numbers
-            List<Numbers> RandList = new List<Numbers>();
-            //считываем список из файла в список класса Numbers
-            RandList = ReadFileToList(path);
-            //создаем список только со случайными значениями
-            var RandValues = RandList.Select(o => o.Value).ToList();
-            //создаем список только со случайными значениями
-            var count = RandValues
-                        .GroupBy(e => e)
-                        .Where(e => e.Count() == Amount)
-                        .Select(e => e.First());
-            ViewBag.Message = string.Format("Найдено {0} случайных чисел, повторяющихся {1} раз", count.Count(), Amount);
-            return View(count.ToList());
+            else
+            {
+                //задаем путь к файлу
+                string path = HttpRuntime.AppDomainAppPath + @"/sample.txt";
+                //инициализируем переменную количества повторений
+                int Amount = new int();
+                if (!String.IsNullOrEmpty(amount))
+                {
+                    Int32.TryParse(amount, out Amount);
+                }
+                //инициализируем списки класса Numbers
+                List<Numbers> RandList = new List<Numbers>();
+                //считываем список из файла в список класса Numbers
+                RandList = ReadFileToList(path);
+                //создаем список только со случайными значениями
+                var RandValues = RandList.Select(o => o.Value).ToList();
+                //создаем список только со случайными значениями
+                var count = RandValues
+                            .GroupBy(e => e)
+                            .Where(e => e.Count() == Amount)
+                            .Select(e => e.First());
+                ViewBag.Message = string.Format("Найдено {0} случайных чисел, повторяющихся {1} раз", count.Count(), Amount);
+                return View(count.ToList());
+            }
         }
 
         public ActionResult Index()

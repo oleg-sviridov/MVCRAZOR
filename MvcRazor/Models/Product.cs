@@ -5,19 +5,8 @@ using System.Web;
 
 namespace MvcRazor.Models
 {
-    public class Product
-    {
-        public int ProductId { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public decimal Price { get; set; }
-        public string Category { get; set; }
-    }
 
-
-
-
-
+    //Класс, содержащий номер позиции и его значения
     public class Numbers
     {
         public int Item { get; set; }

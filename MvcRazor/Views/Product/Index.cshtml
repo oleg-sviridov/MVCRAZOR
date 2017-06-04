@@ -35,19 +35,19 @@
     <div class="container">
         <input type="button" value="Нарисовать график 10 самых частых значений" />
     </div>
-    <div id="chart1" style="min-width: 350px; height: 350px; max-width: 600px; margin: 0 auto"></div>
-
+    <p></p>
     @*Поиск значений, повторяющиеся N раз *@
     @using (Html.BeginForm("Index", "Product", FormMethod.Post))
     {
         <input type="text" id="txtName" name="amount" />
             <input type="submit" id="btnSubmit" value="Найти значения, повторяющиеся N раз" />
     }
-    @*Вывод таблицы*@
+    <p></p>
+    @*Вывод таблицы или графика, в зависимости от запроса*@
     @if (Model != null)
     {
-            <table cellspacing="2" border="1" cellpadding="1" width="100">
-            <tr>
+        @*Вывод таблицы*@
+        <table cellspacing="2" border="1" cellpadding="1" width="100">
             @foreach (var Number in Model)
                 {
                 @*Чтение свойства элемента модели*@
@@ -56,9 +56,15 @@
                         <h3>@Number</h3>
                     </td>
                 </tr>
-                }
-            </table>
+            }
+        </table>
     }
+    else
+    {
+        @*График*@
+        <div id="chart1" style="min-width: 350px; height: 350px; max-width: 600px; margin: 0 auto"></div>
+    }
+
     @if (ViewBag.Message != null)
     {
         <script type="text/javascript">
