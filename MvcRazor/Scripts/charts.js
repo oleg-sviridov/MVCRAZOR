@@ -1,7 +1,8 @@
 ﻿
-$(function () {
+$(document).ready(function () {
+    $('.container').on('click', 'input[type="button"]', function () {
     $.ajax({
-        url: 'Home/VehicleSummary',
+        url: 'Product/Draw',
         dataType: "json",
         type: "GET",
         contentType: 'application/json; charset=utf-8',
@@ -17,16 +18,17 @@ $(function () {
                 var serie = new Array(data[i].Item, data[i].Value);
                 series.push(serie);
             }
-            DrawPieChart(series);
+            DrawChart(series);
         },
         error: function (xhr) {
-            alert("error");
+            alert("Произошла ошибка чтения файла, возможно данные были изменены");
         }
     });
+    })
 });
 
 
-function DrawPieChart(series) {
+function DrawChart(series) {
     var chart;
 
     chart = new Highcharts.Chart({
@@ -37,16 +39,16 @@ function DrawPieChart(series) {
             plotShadow: false
         },
         title: {
-            text: 'Solar Employment Growth by Sector, 2010-2016'
+            text: 'График из последовательности 10 самых повторяющихся значений'
         },
-
-        subtitle: {
-            text: 'Source: thesolarfoundation.com'
-        },
-
         yAxis: {
             title: {
-                text: 'Number of Employees'
+                text: 'Позиция'
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Значение'
             }
         },
         legend: {
@@ -54,9 +56,8 @@ function DrawPieChart(series) {
             align: 'right',
             verticalAlign: 'middle'
         },
-
         series: [{
-            name: 'Installation',
+            name: 'Случайные числа',
             data: series
         }]
     });

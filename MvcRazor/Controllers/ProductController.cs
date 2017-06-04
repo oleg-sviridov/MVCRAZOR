@@ -40,12 +40,12 @@ namespace MvcRazor.Controllers
         }
 
         [HttpPost]
-        public ActionResult Generate(string amount)
+        public ActionResult Index(string amount)
         {
 
             int Min = 1;
-            int Max = 10;
-            int Size = 100;
+            int Max = 1000000;
+            int Size = 1000000;
 
             if (!String.IsNullOrEmpty(amount))
             {
@@ -53,7 +53,7 @@ namespace MvcRazor.Controllers
             }
 
             Random RandInt = new Random();
-            
+
             string path = HttpRuntime.AppDomainAppPath + @"/sample1.txt";
 
             if (System.IO.File.Exists(path))
@@ -63,15 +63,96 @@ namespace MvcRazor.Controllers
 
             using (StreamWriter sw = System.IO.File.AppendText(path))
             {
-                for (int i = 0; i < Size; i++)
+                for (int i = 1; i <= Size; i++)
                 {
-                    sw.WriteLine(RandInt.Next(Min, Max));
+                    sw.WriteLine(i + "," + RandInt.Next(Min, Max));
                 }
             }
 
             ViewBag.Message = string.Format("Файл с {0} случайных чисел сгенерирован успешно.", Size);
             return View();
         }
+
+        [HttpGet]
+        public ActionResult Draw()
+        {
+            string path = HttpRuntime.AppDomainAppPath + @"/sample1.txt";
+            List<Numbers> RandList = new List<Numbers>();
+            List<Numbers> CountList = new List<Numbers>();
+            List<Numbers> MostList = new List<Numbers>();
+            List<Numbers> MostSequenceList = new List<Numbers>();
+
+            //todo: post with the check if file exists
+            if (!System.IO.File.Exists(path)) { }
+
+            using (var fs = System.IO.File.OpenRead(path))
+            using (var reader = new StreamReader(fs))
+            {
+
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    var values = line.Split(',');
+
+                    Numbers numbers = new Numbers();
+
+                    Int32.TryParse(values[0], out int Item);
+                    numbers.Item = Item;
+                    Int32.TryParse(values[1], out int Value);
+                    numbers.Value = Value;
+
+                    RandList.Add(numbers);
+                }
+            }
+
+            var RandValues = RandList.Select(o => o.Value).ToList();
+            //количество повторений какого-либо числа
+            var groups = RandValues.GroupBy(item => item);
+            foreach (var group in groups)
+            {
+                Numbers numbers = new Numbers();
+                numbers.Item = group.Key;
+                numbers.Value = group.Count();
+                
+                CountList.Add(numbers); 
+
+            }
+            //первые 10 самые частые
+            var most = RandValues.GroupBy(i => i).OrderByDescending(grp => grp.Count()).Select(grp => grp.Key).Take(10);
+
+            //логика для последующего вывода рейтинга 10 самых частых на графике
+            /*int j = 1;
+
+            foreach (var group in most)
+            {
+                Numbers numbers = new Numbers();
+                numbers.Item = j;
+                j++;
+                numbers.Value = group;
+
+                MostList.Add(numbers);
+
+            }*/
+
+
+            var query = from Rand in RandList
+                        join Most in most.ToList()
+                        on Rand.Value equals Most
+                        select Rand;
+
+            foreach (var val in query)
+            {
+                Numbers numbers = new Numbers();
+                numbers.Item = val.Item;
+                numbers.Value = val.Value;
+
+                MostSequenceList.Add(numbers);
+
+            }
+
+            return Json(MostSequenceList.ToList(), JsonRequestBehavior.AllowGet);
+        }
+
 
         public ActionResult Index()
         {

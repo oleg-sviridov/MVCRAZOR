@@ -3,7 +3,6 @@
 Модель, переданная в контроллере в качестве параметра метода View, может быть использована по ссылке @Model*@
 @*<MvcRazor.Models.Product>*@
 @using System.Data;
-@using DataVisualization.Charting.Chart;
 @model List<Int32>
 
 
@@ -41,43 +40,43 @@
     @*Сохранем файл*@
     <input type="button" value="Сохранить файл" onclick="location.href='@Url.Action("Save_File", "Product" )'" />
 
-    @*Рисуем график*@
-    @using (Html.BeginForm("Index", "Product", FormMethod.Post))
+    @*Рисуем график
+    @using (Html.BeginForm("Draw", "Product", FormMethod.Post))
     {
         <input type="submit" id="btnSubmit" value="Нарисовать график 10 самых частых" />
     }
-    @if (ViewBag.Message != null)
-    {
-        <script type="text/javascript">
-            window.onload = function () {
-                alert("@ViewBag.Message");
-            };
-        </script>
-    }
+    *@
 
-    @*Выводим таблицу*@
-    @if (Model != null)
-    { 
-        foreach (var Number in Model)
+
+    <div class="container">
+        <input type="button" value="Нарисовать график 10 самых частых" />
+    </div>
+        <div id="chart1" style="min-width: 350px; height: 350px; max-width: 600px; margin: 0 auto"></div>
+
+
+        @*Выводим таблицу*@
+        @if (Model != null)
         {
-            @*Чтение свойства элемента модели*@
-            <h3>Имя продукта: @Number</h3>
-        
-            //if (item.Category == "Канцтовары")
-            //{
-                @*Razor понимает, что оператор в теле if начинается с HTML дескриптора, 
-                и поэтому относится к нему как к разметке, которую нужно генерировать*@
-                //<p>На канцтовары действует <b>скидка 10%</b></p>
-            //}
+            foreach (var Number in Model)
+            {
+                @*Чтение свойства элемента модели*@
+                <h3>Имя продукта: @Number</h3>
 
-            //if (item.Price < 5)
-            //{
+                //if (item.Category == "Канцтовары")
+                //{
+                @*Razor понимает, что оператор в теле if начинается с HTML дескриптора,
+                    и поэтому относится к нему как к разметке, которую нужно генерировать*@
+                //<p>На канцтовары действует <b>скидка 10%</b></p>
+                //}
+
+                //if (item.Price < 5)
+                //{
                 @* Префикс строки @: указывает что строку нужно обработать так, как если она будет HTML разметкой*@
                 //@:стоимость доставки 10 грн.
-            //}
-            //<hr />
+                //}
+                //<hr />
+            }
         }
-    }
 
 </body>
 </html>

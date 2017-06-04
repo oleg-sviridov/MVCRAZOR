@@ -13,4 +13,11 @@ namespace MvcRazor.Models
         public decimal Price { get; set; }
         public string Category { get; set; }
     }
+
+    public class Numbers
+    {
+        public int Item { get; set; }
+        public int Value { get; set; }
+    }
+
 }
