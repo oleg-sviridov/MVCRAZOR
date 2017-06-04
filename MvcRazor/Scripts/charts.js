@@ -11,17 +11,16 @@ $(document).ready(function () {
         cache: false,
         delay: 20000,
         success: function (data) {
-
             var series = new Array();
-
             for (var i in data) {
                 var serie = new Array(data[i].Item, data[i].Value);
                 series.push(serie);
             }
             DrawChart(series);
+            alert("График успешно построен");
         },
         error: function (xhr) {
-            alert("Произошла ошибка чтения файла, возможно данные были изменены");
+            alert("Произошла ошибка чтения файла, возможно, данные были изменены");
         }
     });
     })
