@@ -125,3 +125,35 @@ D:\Projects\MVCRAZOR\MvcRazor\bin\System.Web.Razor.xml
 D:\Projects\MVCRAZOR\MvcRazor\bin\System.Web.WebPages.xml
 D:\Projects\MVCRAZOR\MvcRazor\bin\System.Web.WebPages.Deployment.xml
 D:\Projects\MVCRAZOR\MvcRazor\bin\System.Web.WebPages.Razor.xml
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\MvcRazor.dll.config
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\MvcRazor.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\MvcRazor.pdb
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\Antlr3.Runtime.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\EntityFramework.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\Newtonsoft.Json.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Net.Http.Formatting.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.Http.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.Http.WebHost.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.Mvc.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.Optimization.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.Providers.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.Razor.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.WebPages.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.WebPages.Razor.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\WebGrease.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\EntityFramework.xml
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\Newtonsoft.Json.xml
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Net.Http.Formatting.xml
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.Http.xml
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.Http.WebHost.xml
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.Mvc.xml
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.Razor.xml
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.WebPages.xml
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\bin\System.Web.WebPages.Razor.xml
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\obj\Debug\MvcRazor.csprojResolveAssemblyReference.cache
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\obj\Debug\MvcRazor.dll
+D:\Projects\MVCRAZOR_с работы\MVCRAZOR\MvcRazor\obj\Debug\MvcRazor.pdb
