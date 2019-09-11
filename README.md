@@ -1,11 +1,7 @@
 # MVCRAZOR
-Тестовый проект выполнен на ASP MVC
+The project is on ASP.NET MVC 5
 
-Программа выполняет следующие операции:
-1. Генерирует файл (csv-формат), который заполнется случайными целыми числами от 1 до 1 млн. в количестве 10 млн.,
-  Присутствует возможность выгружать данный файл с сайта.
-2. Строится график отображения из 10 наиболее часто встречающихся чисел.
-3. Предоставляется пользователю возможность поиска всех чисел, которые встречаются указанное число раз 
-  (результат - в виде таблички, ввод числа пользователем с клавиатуры из специального текстового поля).
-  
-  Тестовое задание выполнено для компании "Консультант Плюс"
+The code implement the several tasks:
+1. Generate csv file with 10.000.000 random integers with value from 1 to 1.000.000. It is possible to download the generated file afterwards.
+2. Draw a graph of 10 most common integers.
+3. Search integers which are met selected amount of times
